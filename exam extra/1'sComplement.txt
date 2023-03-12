@@ -1,0 +1,11 @@
+def A(s):
+ st = ""
+ for i in s:
+ if i == "0":
+ st += "1"
+ elif i == "1":
+ st += "0"
+ print(st)
+#main
+s='001101010101010'
+A(s)

@@ -1,0 +1,21 @@
+def A(s,i):
+ print("A-> ",end=" ")
+ if i == len(s):
+ print("Odd")
+ return
+ if s[i]=='0' or s[i]=='2' or s[i]=='4' or s[i]=='6' or s[i]=='8' :
+ B(s,i+1)
+ else:
+ A(s,i+1)
+def B(s,i):
+ print("B-> ",end=" ")
+ if i == len(s):
+ print("Even")
+ return
+ if s[i]=='0' or s[i]=='2' or s[i]=='4' or s[i]=='6' or s[i]=='8' :
+ B(s,i+1)
+ else:
+ A(s,i+1)
+def S():
+ s=input('enter : ')
+ A(s,0)

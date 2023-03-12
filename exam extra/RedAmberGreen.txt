@@ -1,0 +1,70 @@
+def q0(s,i):
+ print("q0 -> ",end= " ")
+ if i==len(s):
+ print("Not Accepted ")
+ return
+ if s[i]=='r':
+ q1(s,i+1)
+ elif s[i]=='g':
+ q2(s,i+1)
+ elif s[i]=='a':
+ q3(s,i+1)
+ else:
+ q4(s,i+1)
+ 
+ 
+ 
+def q1(s,i):
+ print("q1 -> ",end= " ")
+ if i==len(s):
+ print("Accepted ")
+ return
+ if s[i]=='r':
+ q4(s,i+1)
+ elif s[i]=='g':
+ q2(s,i+1)
+ elif s[i]=='a':
+ q3(s,i+1)
+ else:
+ q4(s,i+1)
+def q2(s,i):
+ print("q2 -> ",end= " ")
+ if i==len(s):
+print("Accepted ")
+ return
+ if s[i]=='r':
+ q1(s,i+1)
+ elif s[i]=='g':
+ q4(s,i+1)
+ elif s[i]=='a':
+ q3(s,i+1)
+ else:
+ q4(s,i+1)
+def q3(s,i):
+ print("q3 -> ",end= " ")
+ if i==len(s):
+ print("Accepted ")
+ return
+ if s[i]=='r':
+ q1(s,i+1)
+ elif s[i]=='g':
+ q2(s,i+1)
+ elif s[i]=='a':
+ q4(s,i+1)
+ else:
+ q4(s,i+1)
+def q4(s,i):
+ print("q4 -> ",end= " ")
+ if i==len(s):
+ print("Not Accepted ")
+ return
+ if s[i]=='r':
+ q4(s,i+1)
+elif s[i]=='g':
+ q4(s,i+1)
+ elif s[i]=='a':
+ q4(s,i+1)
+ else:
+ q4(s,i+1)
+s='ragrga'
+q0(s,0)

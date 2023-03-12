@@ -1,0 +1,35 @@
+stack=[]
+def A(s,i,a):
+ if i==len(s):
+ print(s,"is not belong to provide grammar")
+ return
+ if s[i]=='a':
+ print("A -> ",end=' ')
+ stack.append('X')
+
+ A(s,i+1,a+1)
+ else:
+ B(s,i,a)
+def B(s,i,a):
+ if i==len(s):
+ C(s,i+1,a+1)
+ return
+ if len(stack)>0:
+ stack.pop()
+ a=a+1
+ if s[i]=='b':
+ print("B -> ",end=' ')
+ B(s,i+1,a)
+ else:
+ C(s,i+1,a)
+def C(s,i,a):
+ if len(stack)==0:
+ if i==a:
+ print(s,"is belong to provide grammar")
+ else:
+ print(s,"is not belong to provide grammar")
+ else:
+ print(s,"is not belong to provide grammar")
+#mabelong to
+s='aaaabbbb'
+A(s,0,0)

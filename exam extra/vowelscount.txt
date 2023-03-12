@@ -1,0 +1,23 @@
+def A(s,i,n):
+ if len(s)==i:
+ print("Given String :",s)
+ print("Number of Vowels :",n)
+ return
+ if s[i]=='a' or s[i]=='e' or s[i]=='i' or s[i]=='o' or s[i]=='u' :
+ n=n+1
+ B(s,i+1,n)
+ else:
+ A(s,i+1,n)
+def B(s,i,n):
+ if len(s)==i:
+ print("Given String :",s)
+ print("Number of Vowels :",n)
+ return
+ 
+ if s[i]=='a' or s[i]=='e' or s[i]=='i' or s[i]=='o' or s[i]=='u' :
+ n=n+1
+ B(s,i+1,n)
+ else:
+ A(s,i+1,n)
+s="aaa"
+A(s,0,0)
